@@ -85,7 +85,16 @@ svg#rocket-smoke {
 .map-container {
   max-width: fit-content;
   align-self: center;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
+}
+
+.marker-label {
+  color: #FFFFFF;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+.result-container {
+  margin-bottom: 10px;
 }
 
 .example-form {

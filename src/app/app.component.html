@@ -64,7 +64,20 @@
 
   <!-- Map -->
   <div class="map-container">
-    <google-map></google-map>
+    <google-map [center]="center"
+                [zoom]="zoom">
+      <map-marker *ngFor="let marker of markers"
+                  [position]="marker.position"
+                  [options]="markerOptions"
+                  [label]="marker.label"
+      />
+      <map-polyline *ngFor="let polylinePath of polylinePaths"
+                    [path]="polylinePath" [options]="polylineOptions"/>
+    </google-map>
+  </div>
+
+  <div class="result-container" *ngIf="distance > 0">
+    <h3>Geographic Distance is {{ distance}} KM</h3>
   </div>
 
   <!-- Form -->
